@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termo Bíblico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="palavra_biblica.png" alt="Logo do jogo" class="logo">
+
+    <button id="jogar-novamente-button" style="display: none;" onclick="reloadGame()">Jogar Novamente</button>
+    
+    <!-- Grade do jogo -->
+    <div id="game-board" class="grid"></div>
+   
+    <!-- Mensagem de status -->
+    <div id="message"></div>
+
+    <!-- Modal de regras -->
+    <div id="rules-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Regras do Termo Bíblico</h2>
+            <p>Tente adivinhar a palavra correta em 6 tentativas!</p>
+            <p>A palavra tem 5 letras, após cada tentativa, o jogo mostrará
+                quais letras estão na palavra ao não.
+            </p>
+            <p><span style="color: green";>Verde</span>: a letra está no lugar certo.</p>
+            <p><span style="color: yellow";>Amarelo</span>: a letra está na palavra, porém no lugar errado.</p>
+            <p><span style="color: gray";>Preto</span>: a letra não está na palavra.</p>
+        </div>
+    </div>
+    <input type="text" id="hidden-input" maxlength="5" style="opacity:0; position:absolute; pointer-events:none;">
+
+    <script src="palavras.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
